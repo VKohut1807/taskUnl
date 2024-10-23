@@ -1,0 +1,69 @@
+@import "../config/config.scss";
+
+.footer {
+  h6 {
+    font-size: 0.938rem;
+    font-weight: 700;
+    width: fit-content;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $gray_2;
+    padding: 9.688rem 5rem;
+    border-radius: 1rem;
+
+    &-social {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      &-links {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+      }
+    }
+
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+
+      h6 {
+        margin-left: auto;
+      }
+
+      &-tel {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.625rem;
+        margin: 0.688rem 0;
+
+        span {
+          font-size: 0.813rem;
+          font-weight: 500;
+        }
+
+        svg {
+          width: 1rem;
+          height: auto;
+
+          path {
+            fill: $pink;
+          }
+        }
+      }
+
+      p {
+        font-size: 0.75rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+    }
+  }
+}

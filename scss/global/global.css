@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: clamp(0.75rem, 0.4651rem + 0.5935vw, 1rem);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+ol {
+  color: #2c2e35;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+svg {
+  display: block;
+}
+
+.main {
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.wrapper {
+  width: 73%;
+  margin: 0 auto;
+}/*# sourceMappingURL=global.css.map */
