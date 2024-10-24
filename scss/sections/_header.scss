@@ -18,6 +18,7 @@
     flex-direction: row;
     align-items: center;
     gap: 0.625rem;
+    cursor: pointer;
 
     span {
       color: #fff;
@@ -42,6 +43,7 @@
       flex-direction: row;
       align-items: center;
       margin: 0 0.375rem;
+      cursor: pointer;
 
       svg {
         width: 8rem;
@@ -95,6 +97,7 @@
         padding: 0.25rem;
         width: fit-content;
         height: fit-content;
+        cursor: pointer;
 
         &:hover {
           svg {

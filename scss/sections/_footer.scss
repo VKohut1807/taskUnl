@@ -1,6 +1,8 @@
 @import "../config/config.scss";
 
 .footer {
+  padding: 2.44rem 0 2rem;
+
   h6 {
     font-size: 0.938rem;
     font-weight: 700;
@@ -25,6 +27,7 @@
         display: flex;
         flex-direction: row;
         gap: 1.5rem;
+        cursor: pointer;
       }
     }
 
@@ -52,6 +55,7 @@
         svg {
           width: 1rem;
           height: auto;
+          cursor: pointer;
 
           path {
             fill: $pink;
