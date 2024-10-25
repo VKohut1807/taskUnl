@@ -14,20 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
     <link rel="stylesheet" href="scss/global/global.css" />
     <link rel="stylesheet" href="scss/sections/section.css" />
   </head>
 
-  <body>
+  <body class="modal-open">
     <header class="header">
       <div class="header__communication-line">
         <div class="wrapper">
           <div class="header__communication-line-content">
-            <a
-              href="#"
-              href="tel:+48486231802"
-              class="header__communication-link"
-            >
+            <a href="tel:+48486231802" class="header__communication-link">
               <svg
                 width="16"
                 height="16"
@@ -258,93 +265,110 @@
 
     <main class="main">
       <div class="wrapper">
+        <section class="main__slider single-item">
+          <div class="main__slider-image-box">
+            <img src="https://picsum.photos/seed/1/1400/520" alt="image" />
+          </div>
+          <div class="main__slider-image-box">
+            <img src="https://picsum.photos/seed/2/1400/520" alt="image" />
+          </div>
+          <div class="main__slider-image-box">
+            <img src="https://picsum.photos/seed/3/1400/520" alt="image" />
+          </div>
+          <div class="main__slider-image-box">
+            <img src="https://picsum.photos/seed/4/1400/520" alt="image" />
+          </div>
+          <div class="main__slider-image-box">
+            <img src="https://picsum.photos/seed/5/1400/520" alt="image" />
+          </div>
+        </section>
+
         <section class="main__categorie">
-          <!-- img -->
           <a
             href="#"
             data-title="Baleriny"
-            class="main__categorie-image main__categorie-image--item1"
+            class="main__categorie-image main__categorie-image--large main__categorie-image--item1"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/450"
+              src="https://picsum.photos/seed/1/350/450"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Jazzówki"
-            class="main__categorie-image main__categorie-image--item2"
+            class="main__categorie-image main__categorie-image--small main__categorie-image--item2"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/250"
+              src="https://picsum.photos/seed/2/350/250"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Czółenka"
-            class="main__categorie-image main__categorie-image--item3"
+            class="main__categorie-image main__categorie-image--large main__categorie-image--item3"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/450"
+              src="https://picsum.photos/seed/3/350/450"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Półbuty"
-            class="main__categorie-image main__categorie-image--item4"
+            class="main__categorie-image main__categorie-image--small main__categorie-image--item4"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/250"
+              src="https://picsum.photos/seed/4/350/250"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Mokasyny"
-            class="main__categorie-image main__categorie-image--item5"
+            class="main__categorie-image main__categorie-image--small main__categorie-image--item5"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/250"
+              src="https://picsum.photos/seed/5/350/250"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Kozaki"
-            class="main__categorie-image main__categorie-image--item6"
+            class="main__categorie-image main__categorie-image--large main__categorie-image--item6"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/450"
+              src="https://picsum.photos/seed/6/350/450"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Sandały"
-            class="main__categorie-image main__categorie-image--item7"
+            class="main__categorie-image main__categorie-image--small main__categorie-image--item7"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/250"
+              src="https://picsum.photos/seed/7/350/250"
               alt="image"
             />
           </a>
           <a
             href="#"
             data-title="Wyprzedaż"
-            class="main__categorie-image main__categorie-image--item8"
+            class="main__categorie-image main__categorie-image--large main__categorie-image--item8"
           >
             <img
               loading="lazy"
-              src="https://picsum.photos/350/450"
+              src="https://picsum.photos/seed/8/350/450"
               alt="image"
             />
           </a>
@@ -401,8 +425,8 @@
           </div>
           <div class="main__newsletter-box">
             <div class="main__newsletter-box-email">
-              <input type="email" placeholder="Twój adres email" />
-              <button>
+              <input type="email" id="email" placeholder="Twój adres email" />
+              <button type="button" id="newsletter-button">
                 <svg
                   width="32"
                   height="32"
@@ -432,6 +456,7 @@
                 ></label
               ><br />
             </div>
+            <div id="error-message" class="main__newsletter-box-error"></div>
           </div>
         </section>
       </div>
@@ -544,11 +569,7 @@
           </div>
           <div class="footer__content-contact">
             <h6>Skontaktuj się z nami</h6>
-            <a
-              href="#"
-              href="tel:+48486231802"
-              class="footer__content-contact-tel"
-            >
+            <a href="tel:+48486231802" class="footer__content-contact-tel">
               <svg
                 width="16"
                 height="16"
@@ -572,5 +593,36 @@
         </div>
       </div>
     </footer>
+
+    <div id="modal-shadow" class="shadow"></div>
+    <div id="modal" class="modal">
+      <div class="modal__content">
+        <h5>Welcome :)</h5>
+        <button
+          type="button"
+          id="close-button"
+          class="modal__content-close-button"
+        >
+          X
+        </button>
+
+        <div class="modal__content-body">
+          <h5>Briefly about the added elements</h5>
+          <ol class="modal__content-body-list">
+            <li class="modal__content-body-list-elem">sfdsdf</li>
+            <li class="modal__content-body-list-elem">2222</li>
+            <li class="modal__content-body-list-elem">3333</li>
+            <li class="modal__content-body-list-elem">44</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

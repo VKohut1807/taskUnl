@@ -17,6 +17,9 @@ body {
   flex-direction: column;
   min-height: 100dvh;
 }
+body.modal-open {
+  overflow: hidden;
+}
 
 h1,
 h2,
@@ -41,8 +44,7 @@ a {
   text-decoration: none;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 
