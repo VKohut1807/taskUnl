@@ -1,0 +1,115 @@
+&__newsletter {
+  background-color: $pink;
+  border-radius: 1rem;
+  padding: 2.688rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+
+  &-letters {
+    position: absolute;
+    top: 0;
+    left: 3.75rem;
+    height: 100%;
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &-text {
+    margin-left: 13rem;
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    p {
+      font-size: 0.813rem;
+      font-weight: 500;
+      line-height: 1.125rem;
+      color: #fff;
+    }
+  }
+
+  &-box {
+    margin-right: 3.75rem;
+
+    &-email {
+      border: 1px solid $gray;
+      border-radius: 6.25rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      background-color: #fff;
+      width: 21.25rem;
+
+      input {
+        font-size: 0.875rem;
+        font-weight: 400;
+        outline: none;
+        border: none;
+        padding: 0.911rem 0.188rem 0.911rem 1.313rem;
+      }
+
+      button {
+        padding: 0.024rem;
+        border: 0;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $dark_2;
+        width: 2.625rem;
+        height: 2.625rem;
+
+        svg {
+          margin: 0 auto;
+          width: 1.539rem;
+          height: auto;
+        }
+      }
+    }
+
+    &-consent {
+      color: #fff;
+      line-height: 1.125rem;
+      font-size: 0.75rem;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      margin-left: 0.5rem;
+
+      input {
+        border-radius: 0.25rem;
+        border-left-color: none;
+        outline: none;
+        display: inline-block;
+        width: 1rem;
+        aspect-ratio: 1;
+      }
+
+      &-info {
+        text-decoration: underline;
+      }
+    }
+
+    &-error {
+      display: none;
+      color: #000;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+  }
+}
