@@ -2,7 +2,7 @@ br {
   &.desc {
     display: block;
 
-    @include break("xxs") {
+    @include break("xs") {
       display: none;
     }
   }
@@ -10,7 +10,7 @@ br {
   &.mob {
     display: none;
 
-    @include break("xxs") {
+    @include break("xs") {
       display: block;
     }
   }

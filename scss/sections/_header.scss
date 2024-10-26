@@ -10,6 +10,25 @@
       flex-direction: row;
       justify-content: center;
       gap: 9.875rem;
+
+      @media (max-width: 1500px) {
+        gap: 5.5rem;
+      }
+
+      @include break("xl") {
+        gap: 2.5rem;
+      }
+
+      @include break("lg") {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 0.5rem;
+      }
+
+      @include break("sm") {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -19,6 +38,10 @@
     align-items: center;
     gap: 0.625rem;
     cursor: pointer;
+
+    @include break("sm") {
+      display: none;
+    }
 
     span {
       color: #fff;
@@ -30,6 +53,12 @@
       width: 1rem;
       height: auto;
     }
+
+    &--tel {
+      @include break("sm") {
+        display: flex;
+      }
+    }
   }
 
   &__menu {
@@ -38,12 +67,41 @@
     margin: 3rem auto;
     gap: 2rem;
 
+    @media (max-width: 1850px) {
+      flex-wrap: wrap;
+    }
+
+    @include break("lg") {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    @include break("md") {
+      margin: 2.25rem auto 1.813rem;
+    }
+
+    @include break("xxs") {
+      grid-template-rows: auto 1fr;
+      gap: 1rem;
+    }
+
     &-logo {
       display: flex;
       flex-direction: row;
       align-items: center;
       margin: 0 0.375rem;
       cursor: pointer;
+
+      @media (max-width: 1850px) {
+        flex: 0 0 0;
+      }
+
+      @include break("lg") {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 0 0.5rem 0 0;
+      }
 
       svg {
         width: 8rem;
@@ -56,6 +114,20 @@
       flex-direction: row;
       align-items: center;
       gap: 2rem;
+
+      @media (max-width: 1850px) {
+        flex: 1 1 100%;
+        order: 1;
+        justify-content: flex-end;
+      }
+
+      @include break("xxl") {
+        gap: 1rem;
+      }
+
+      @include break("lg") {
+        display: none;
+      }
     }
 
     &-link {
@@ -88,6 +160,31 @@
       gap: 0.625rem;
       margin-left: auto;
 
+      @media (max-width: 1850px) {
+        flex: 1 1 50%;
+        justify-content: flex-end;
+      }
+
+      @include break("lg") {
+        flex-wrap: wrap;
+      }
+
+      @include break("lg") {
+        grid-column: 1/3;
+        grid-row: 1/3;
+        row-gap: 2rem;
+        margin-left: 0;
+      }
+
+      @include break("md") {
+        row-gap: 1.5rem;
+      }
+
+      @include break("xxs") {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+
       &-box {
         display: flex;
         flex-direction: row;
@@ -116,6 +213,11 @@
           max-width: 14.063rem;
           font-size: 0.75rem;
           font-weight: 400;
+
+          @include break("lg") {
+            max-width: 100%;
+            width: 100%;
+          }
         }
 
         svg {
@@ -132,6 +234,14 @@
           }
         }
 
+        &--search {
+          @include break("lg") {
+            justify-content: space-between;
+            flex: 1 1 100%;
+            order: 1;
+          }
+        }
+
         &--open {
           position: relative;
 
@@ -145,6 +255,14 @@
             aspect-ratio: 1;
             background-color: $pink;
             border-radius: 50%;
+          }
+        }
+
+        &--burger {
+          display: none;
+
+          @include break("lg") {
+            display: block;
           }
         }
       }

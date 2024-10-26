@@ -1,7 +1,7 @@
 br.desc {
   display: block;
 }
-@media (max-width: 390px) {
+@media (max-width: 425px) {
   br.desc {
     display: none;
   }
@@ -9,7 +9,7 @@ br.desc {
 br.mob {
   display: none;
 }
-@media (max-width: 390px) {
+@media (max-width: 425px) {
   br.mob {
     display: block;
   }
