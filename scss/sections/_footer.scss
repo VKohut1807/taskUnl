@@ -3,6 +3,10 @@
 .footer {
   padding: 2.44rem 0 2rem;
 
+  @include break("md") {
+    padding: 1.688rem 0 3.25rem;
+  }
+
   h6 {
     font-size: 0.938rem;
     font-weight: 700;
@@ -14,14 +18,28 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     background-color: $gray_2;
     padding: 9.688rem 5rem;
     border-radius: 1rem;
+
+    @include break("md") {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3.313rem;
+      padding: 1.938rem 0;
+    }
 
     &-social {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+
+      @include break("md") {
+        h6 {
+          margin: 0 auto;
+        }
+      }
 
       &-links {
         display: flex;
@@ -36,8 +54,21 @@
       flex-direction: column;
       text-align: right;
 
+      @include break("md") {
+        order: -1;
+        align-items: center;
+      }
+      @include break("xxs") {
+        order: -1;
+        align-items: flex-start;
+      }
+
       h6 {
         margin-left: auto;
+
+        @include break("md") {
+          margin-left: 0;
+        }
       }
 
       &-tel {
@@ -46,6 +77,10 @@
         justify-content: flex-end;
         gap: 0.625rem;
         margin: 0.688rem 0;
+
+        @include break("md") {
+          justify-content: flex-start;
+        }
 
         span {
           font-size: 0.813rem;
@@ -67,6 +102,15 @@
         font-size: 0.75rem;
         font-weight: 400;
         line-height: 1.25rem;
+
+        @include break("md") {
+          text-align: center;
+        }
+
+        @include break("xxs") {
+          margin-left: 1.6rem;
+          text-align: left;
+        }
       }
     }
   }

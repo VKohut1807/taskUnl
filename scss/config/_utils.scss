@@ -1,1 +1,17 @@
+br {
+  &.desc {
+    display: block;
 
+    @include break("xxs") {
+      display: none;
+    }
+  }
+
+  &.mob {
+    display: none;
+
+    @include break("xxs") {
+      display: block;
+    }
+  }
+}

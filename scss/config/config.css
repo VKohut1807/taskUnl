@@ -1,1 +1,16 @@
-/*# sourceMappingURL=config.css.map */
+br.desc {
+  display: block;
+}
+@media (max-width: 390px) {
+  br.desc {
+    display: none;
+  }
+}
+br.mob {
+  display: none;
+}
+@media (max-width: 390px) {
+  br.mob {
+    display: block;
+  }
+}/*# sourceMappingURL=config.css.map */

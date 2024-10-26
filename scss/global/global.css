@@ -6,7 +6,6 @@
 html {
   box-sizing: border-box;
   width: 100%;
-  font-size: clamp(0.75rem, 0.4651rem + 0.5935vw, 1rem);
 }
 
 body {

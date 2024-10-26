@@ -1,3 +1,37 @@
+br.desc {
+  display: block;
+}
+@media (max-width: 390px) {
+  br.desc {
+    display: none;
+  }
+}
+br.mob {
+  display: none;
+}
+@media (max-width: 390px) {
+  br.mob {
+    display: block;
+  }
+}
+
+br.desc {
+  display: block;
+}
+@media (max-width: 390px) {
+  br.desc {
+    display: none;
+  }
+}
+br.mob {
+  display: none;
+}
+@media (max-width: 390px) {
+  br.mob {
+    display: block;
+  }
+}
+
 .header__communication-line {
   background-color: #f62f61;
   padding: 0.563rem 0;
@@ -443,8 +477,30 @@
   font-weight: 600;
 }
 
+br.desc {
+  display: block;
+}
+@media (max-width: 390px) {
+  br.desc {
+    display: none;
+  }
+}
+br.mob {
+  display: none;
+}
+@media (max-width: 390px) {
+  br.mob {
+    display: block;
+  }
+}
+
 .footer {
   padding: 2.44rem 0 2rem;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.688rem 0 3.25rem;
+  }
 }
 .footer h6 {
   font-size: 0.938rem;
@@ -457,14 +513,28 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
   background-color: #f6f6f6;
   padding: 9.688rem 5rem;
   border-radius: 1rem;
+}
+@media (max-width: 768px) {
+  .footer__content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3.313rem;
+    padding: 1.938rem 0;
+  }
 }
 .footer__content-social {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+@media (max-width: 768px) {
+  .footer__content-social h6 {
+    margin: 0 auto;
+  }
 }
 .footer__content-social-links {
   display: flex;
@@ -477,8 +547,25 @@
   flex-direction: column;
   text-align: right;
 }
+@media (max-width: 768px) {
+  .footer__content-contact {
+    order: -1;
+    align-items: center;
+  }
+}
+@media (max-width: 390px) {
+  .footer__content-contact {
+    order: -1;
+    align-items: flex-start;
+  }
+}
 .footer__content-contact h6 {
   margin-left: auto;
+}
+@media (max-width: 768px) {
+  .footer__content-contact h6 {
+    margin-left: 0;
+  }
 }
 .footer__content-contact-tel {
   display: flex;
@@ -486,6 +573,11 @@
   justify-content: flex-end;
   gap: 0.625rem;
   margin: 0.688rem 0;
+}
+@media (max-width: 768px) {
+  .footer__content-contact-tel {
+    justify-content: flex-start;
+  }
 }
 .footer__content-contact-tel span {
   font-size: 0.813rem;
@@ -503,6 +595,17 @@
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1.25rem;
+}
+@media (max-width: 768px) {
+  .footer__content-contact p {
+    text-align: center;
+  }
+}
+@media (max-width: 390px) {
+  .footer__content-contact p {
+    margin-left: 1.6rem;
+    text-align: left;
+  }
 }
 
 .shadow {
