@@ -62,19 +62,6 @@ $(document).ready(function () {
     $("#burger-menu").hide(400);
   });
 
-  $(".single-item").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    dots: true,
-    arrows: true,
-    infinite: true,
-    lazyLoad: "ondemand",
-    prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>',
-  });
-
   $("#newsletter-button").click(function (event) {
     var email = $("#email").val();
     var errorMessage = $("#error-message");
@@ -95,9 +82,22 @@ $(document).ready(function () {
     }
   });
 
-  $("#close-button").click(function () {
+  $("#start-close-button").click(function () {
     $("body").removeClass("modal-open");
     $("#modal-shadow").hide();
     $("#modal").hide();
+
+    $(".single-item").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      dots: true,
+      arrows: true,
+      infinite: true,
+      lazyLoad: "ondemand",
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+    });
   });
 });

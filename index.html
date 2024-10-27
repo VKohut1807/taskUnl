@@ -760,19 +760,65 @@
         <h5>Welcome :)</h5>
         <button
           type="button"
-          id="close-button"
+          id="start-close-button"
           class="modal__content-close-button"
         >
           X
         </button>
 
         <div class="modal__content-body">
-          <h5>Briefly about the added elements</h5>
+          <h6>Briefly about the added elements</h6>
           <ol class="modal__content-body-list">
-            <li class="modal__content-body-list-elem">sfdsdf</li>
-            <li class="modal__content-body-list-elem">2222</li>
-            <li class="modal__content-body-list-elem">3333</li>
-            <li class="modal__content-body-list-elem">44</li>
+            <li class="modal__content-body-list-elem">
+              Upon page load, a modal window with a brief description of the
+              work is displayed.
+            </li>
+            <li class="modal__content-body-list-elem">
+              Styling was implemented using SCSS with the BEM
+            </li>
+            <li class="modal__content-body-list-elem">
+              Added a slider using the Slick Slider library for smooth and
+              responsive slide transitions.
+            </li>
+            <li class="modal__content-body-list-elem">
+              The slider starts after closing the initial modal window.
+            </li>
+            <li class="modal__content-body-list-elem">
+              Images are fetched from the Picsum.photos API + Lazy Loading.
+            </li>
+            <li class="modal__content-body-list-elem">
+              Used jQuery to add interactivity to the page.
+            </li>
+            <li class="modal__content-body-list-elem">
+              When a category title from the search field is entered, the page
+              scrolls to the corresponding section and highlights the text
+              ex."Sandały". (desktop version).
+            </li>
+            <li class="modal__content-body-list-elem">
+              On clicking the heart icon, the item is added to "localStorage"
+              with a key and data, simulating the addition of the product to the
+              favorites list.
+            </li>
+            <li class="modal__content-body-list-elem">
+              When the basket icon is clicked, a modal window displaying the
+              shopping cart opens. (inside, it is only briefly described how you
+              can expand the basket)
+            </li>
+            <li class="modal__content-body-list-elem">
+              The burger icon is activated, and the desktop menu is hidden when
+              the screen width is less than 992px.
+            </li>
+            <li class="modal__content-body-list-elem">
+              When the burger icon is clicked, a modal window for the burger
+              menu opens.
+            </li>
+            <li class="modal__content-body-list-elem">
+              Added validation for email submission, including a requirement for
+              consent acknowledgment.
+            </li>
+            <li class="modal__content-body-list-elem">
+              The page responsive for screen widths down to 320 pixels.
+            </li>
           </ol>
         </div>
       </div>
@@ -789,10 +835,10 @@
       </button>
 
       <p>
-        You can view products that you have saved in local storage or global
-        storage, such as in Vue.js - Vuex. If you have added products to the
-        cart, they will appear here. If there are no products in the cart, you
-        will see the message: <b>"You must add products to the cart."</b>
+        The cart can be expanded to display products saved in local storage or
+        global storage as (e.g., Vue.js - Vuex). If products have been added to
+        the cart, they will be listed here. If the cart is empty, a message will
+        be displayed: <b>"You must add products to the cart."</b>
       </p>
     </section>
 

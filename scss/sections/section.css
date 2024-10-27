@@ -386,6 +386,7 @@ br.mob {
   align-items: center;
   justify-content: center;
   z-index: 32;
+  cursor: pointer;
 }
 .header__burger-menu-content {
   position: relative;
@@ -439,6 +440,7 @@ br.mob {
 .main__slider {
   width: 100%;
   height: 32.5rem;
+  overflow: hidden;
 }
 .main__slider .slick-list {
   border-radius: 1rem;
@@ -498,6 +500,7 @@ br.mob {
 }
 .main__slider .slick-dots li button {
   padding: 0.375rem;
+  cursor: pointer;
 }
 .main__slider .slick-dots li button::before {
   display: flex;
@@ -939,6 +942,7 @@ br.mob {
   background-color: #292929;
   width: 2.625rem;
   height: 2.625rem;
+  cursor: pointer;
 }
 .main__newsletter-box-email button svg {
   margin: 0 auto;
@@ -1128,17 +1132,25 @@ br.mob {
   transform: translate(-50%, -50%);
   background-color: #fff;
   width: 50%;
-  height: 50%;
+  min-height: 50%;
+  max-height: 80vh;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 4rem;
   color: #292929;
   box-shadow: 0 0.25rem 1.2rem rgba(0, 0, 0, 0.2);
   z-index: 25;
+  overflow-y: auto;
+}
+@media (max-width: 768px) {
+  .modal {
+    width: 75%;
+  }
 }
 .modal__content h5 {
   font-size: 1.2rem;
   font-weight: 500;
   text-align: center;
+  margin-top: 3rem;
 }
 .modal__content-close-button {
   position: absolute;
@@ -1155,6 +1167,7 @@ br.mob {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .modal__content-body {
   margin-top: 1rem;
@@ -1163,6 +1176,12 @@ br.mob {
   font-size: 1.1rem;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 1rem;
+}
+.modal__content-body-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .modal__content-body-list-elem {
   font-size: 1rem;
@@ -1203,4 +1222,5 @@ br.mob {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }/*# sourceMappingURL=section.css.map */
