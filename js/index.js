@@ -1,14 +1,19 @@
 $(document).ready(function () {
   $("#search-button").click(function (event) {
-    var search = $("#search").val().trim();
+    var search = $("#search").val().trim().toLowerCase();
+    var targetElement = $(`[data-title]`).filter(function () {
+      return $(this).data("title").toLowerCase() === search;
+    });
+
+    if (targetElement.length <= 0) return;
 
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $(`[data-title="${search}"]`).offset().top,
+        scrollTop: targetElement?.offset().top,
       },
       1000,
       function () {
-        $(`[data-title="${search}"]`).addClass("show");
+        targetElement?.addClass("show");
       }
     );
   });
