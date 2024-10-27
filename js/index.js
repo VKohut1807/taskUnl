@@ -91,6 +91,7 @@ $(document).ready(function () {
     $("body").removeClass("modal-open");
     $("#modal-shadow").hide();
     $("#modal").hide();
+    $(".single-item").css("overflow", "visible");
 
     $(".single-item").slick({
       slidesToShow: 1,
