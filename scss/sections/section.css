@@ -557,6 +557,14 @@ br.mob {
   overflow: hidden;
   position: relative;
 }
+.main__categorie-image.show::before {
+  visibility: visible;
+  opacity: 1;
+}
+.main__categorie-image.show::after {
+  visibility: visible;
+  opacity: 1;
+}
 .main__categorie-image:hover img {
   transform: scale(1.03);
 }

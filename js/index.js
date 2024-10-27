@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  $("#search-button").click(function (event) {
+    var search = $("#search").val().trim();
+
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(`[data-title="${search}"]`).offset().top,
+      },
+      1000,
+      function () {
+        $(`[data-title="${search}"]`).addClass("show");
+      }
+    );
+  });
+
   $(".single-item").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
