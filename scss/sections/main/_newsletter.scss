@@ -7,13 +7,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   margin-top: 1.75rem;
+
+  @include break("lg") {
+    flex-direction: column;
+    align-items: normal;
+    gap: 1.125rem;
+    padding: 2.625rem 5rem;
+  }
+
+  @include break("sm") {
+    padding: 2.625rem 1.25rem;
+  }
 
   &-letters {
     position: absolute;
     top: 0;
     left: 3.75rem;
     height: 100%;
+
+    @media (max-width: 1600px) {
+      display: none;
+    }
 
     svg {
       height: 100%;
@@ -24,10 +40,19 @@
   &-text {
     margin-left: 13rem;
 
+    @media (max-width: 1600px) {
+      margin-left: 3.75rem;
+    }
+
+    @include break("lg") {
+      margin-left: 0;
+    }
+
     h3 {
       font-size: 1.5rem;
       font-weight: 800;
       color: #fff;
+      margin-bottom: 0.25rem;
     }
 
     p {
@@ -35,11 +60,21 @@
       font-weight: 500;
       line-height: 1.125rem;
       color: #fff;
+
+      br {
+        @include break("lg") {
+          display: none;
+        }
+      }
     }
   }
 
   &-box {
     margin-right: 3.75rem;
+
+    @include break("lg") {
+      margin-right: 0;
+    }
 
     &-email {
       border: 1px solid $gray;
@@ -53,12 +88,20 @@
       background-color: #fff;
       width: 21.25rem;
 
+      @include break("lg") {
+        width: 100%;
+      }
+
       input {
         font-size: 0.875rem;
         font-weight: 400;
         outline: none;
         border: none;
         padding: 0.911rem 0.188rem 0.911rem 1.313rem;
+
+        @include break("lg") {
+          width: 100%;
+        }
       }
 
       button {
@@ -89,6 +132,10 @@
       align-items: center;
       gap: 0.5rem;
       margin-left: 0.5rem;
+
+      @include break("lg") {
+        margin-left: 0;
+      }
 
       input {
         border-radius: 0.25rem;
