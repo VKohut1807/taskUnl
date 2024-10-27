@@ -256,7 +256,10 @@
                 />
               </svg>
             </div>
-            <div class="header__menu-tools-box header__menu-tools-box--open">
+            <div
+              id="basket-button"
+              class="header__menu-tools-box header__menu-tools-box--open"
+            >
               <svg
                 width="20"
                 height="20"
@@ -734,6 +737,24 @@
           </ol>
         </div>
       </div>
+    </section>
+
+    <section id="modal-basket" class="modal__basket">
+      <h3>BASKET</h3>
+      <button
+        type="button"
+        id="basket-close-button"
+        class="modal__basket-close-button"
+      >
+        X
+      </button>
+
+      <p>
+        You can view products that you have saved in local storage or global
+        storage, such as in Vue.js - Vuex. If you have added products to the
+        cart, they will appear here. If there are no products in the cart, you
+        will see the message: <b>"You must add products to the cart."</b>
+      </p>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

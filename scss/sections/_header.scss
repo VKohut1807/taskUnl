@@ -5,6 +5,10 @@
     background-color: $pink;
     padding: 0.563rem 0;
 
+    @include break("xxl") {
+      padding: 0.625rem 0;
+    }
+
     &-content {
       display: flex;
       flex-direction: row;
@@ -15,7 +19,7 @@
         gap: 5.5rem;
       }
 
-      @include break("xl") {
+      @include break("xxl") {
         gap: 2.5rem;
       }
 

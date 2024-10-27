@@ -38,6 +38,18 @@ $(document).ready(function () {
     }
   });
 
+  $("#basket-button").click(function () {
+    $("body").addClass("modal-open");
+    $("#modal-shadow").css("display", "block");
+    $("#modal-basket").css("display", "block");
+  });
+
+  $("#basket-close-button").click(function () {
+    $("body").removeClass("modal-open");
+    $("#modal-shadow").css("display", "none");
+    $("#modal-basket").css("display", "none");
+  });
+
   $(".single-item").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
