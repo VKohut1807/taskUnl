@@ -13,6 +13,31 @@ $(document).ready(function () {
     );
   });
 
+  function checkFavoriteLocalSt() {
+    const pathSvg = $("#favorite").find("svg path");
+    const productName = localStorage.getItem("product-name");
+
+    if (productName) {
+      pathSvg.attr("fill", "#f62f61");
+    } else {
+      pathSvg.attr("fill", "none");
+    }
+  }
+  checkFavoriteLocalSt();
+
+  $("#favorite").click(function (event) {
+    const pathSvg = $(this).find("svg path");
+    const productName = localStorage.getItem("product-name");
+
+    if (productName) {
+      pathSvg.attr("fill", "none");
+      localStorage.removeItem("product-name");
+    } else {
+      pathSvg.attr("fill", "#f62f61");
+      localStorage.setItem("product-name", "My favorite product");
+    }
+  });
+
   $(".single-item").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
