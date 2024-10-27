@@ -17,7 +17,7 @@
   height: 50%;
   border-radius: 1rem;
   padding: 2rem;
-  color: #1d1b1b;
+  color: $dark_2;
   box-shadow: 0 0.25rem 1.2rem rgba(0, 0, 0, 0.2);
   z-index: 25;
 
@@ -34,7 +34,7 @@
       right: 1rem;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: #ff4d4d;
+      background-color: $pink;
       font-size: 1rem;
       font-weight: 700;
       border-radius: 50%;
@@ -85,11 +85,11 @@
 
   &-close-button {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 3rem;
+    right: 3rem;
     width: 2.5rem;
     height: 2.5rem;
-    background-color: #ff4d4d;
+    background-color: $pink;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 50%;
@@ -98,8 +98,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-  }
-
-  p {
   }
 }

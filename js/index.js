@@ -40,14 +40,26 @@ $(document).ready(function () {
 
   $("#basket-button").click(function () {
     $("body").addClass("modal-open");
-    $("#modal-shadow").css("display", "block");
-    $("#modal-basket").css("display", "block");
+    $("#modal-shadow").show();
+    $("#modal-basket").show();
   });
 
   $("#basket-close-button").click(function () {
     $("body").removeClass("modal-open");
-    $("#modal-shadow").css("display", "none");
-    $("#modal-basket").css("display", "none");
+    $("#modal-shadow").hide();
+    $("#modal-basket").hide();
+  });
+
+  $("#burger-button").click(function () {
+    $("#burger-menu").show();
+    $("#burger-menu").animate({left: "0"}, 300);
+    $("body").addClass("modal-open");
+  });
+
+  $("#close-burger-button").click(function () {
+    $("#burger-menu").animate({left: "110%"}, 300);
+    $("body").removeClass("modal-open");
+    $("#burger-menu").hide(400);
   });
 
   $(".single-item").slick({
@@ -66,9 +78,7 @@ $(document).ready(function () {
   $("#newsletter-button").click(function (event) {
     var email = $("#email").val();
     var errorMessage = $("#error-message");
-
     var emailRegex = /^([A-Za-z0-9_.-])+@([A-Za-z0-9_-]+\.)+([A-Za-z]{2,4})$/;
-
     var isChecked = $("#consent").is(":checked");
 
     if (emailRegex.test(email)) {
@@ -87,7 +97,7 @@ $(document).ready(function () {
 
   $("#close-button").click(function () {
     $("body").removeClass("modal-open");
-    $("#modal-shadow").css("display", "none");
-    $("#modal").css("display", "none");
+    $("#modal-shadow").hide();
+    $("#modal").hide();
   });
 });
