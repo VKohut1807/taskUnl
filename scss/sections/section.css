@@ -540,14 +540,10 @@ br.mob {
   z-index: 2;
   transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-@media (max-width: 1200px) {
+@media (max-width: 576px) {
   .main__categorie-image::after {
     visibility: visible;
     opacity: 1;
-  }
-}
-@media (max-width: 576px) {
-  .main__categorie-image::after {
     font-size: 1.5rem;
   }
 }
