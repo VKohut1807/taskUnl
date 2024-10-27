@@ -133,6 +133,11 @@
     &-link {
       font-size: 1rem;
       font-weight: 400;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: $pink;
+      }
 
       &--pink {
         color: $pink;
@@ -140,14 +145,79 @@
       }
 
       &--dropdown {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.188rem;
+        position: relative;
+        display: inline-block;
 
-        .dropdown-arrow {
+        &:hover {
+          button {
+            color: $pink;
+
+            svg {
+              transform: rotate(180deg);
+
+              path {
+                stroke: $pink;
+              }
+            }
+          }
+        }
+
+        &:hover &-content {
+          visibility: visible;
+          opacity: 1;
+          z-index: 1;
+        }
+
+        button {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.188rem;
+          border: 0;
+          background-color: transparent;
+          font-size: 1rem;
+          font-weight: 400;
+          cursor: pointer;
+          transition: color 0.3s ease-in-out;
+
           svg {
             width: 0.75rem;
+            transition: transform 0.3s ease-in-out;
+
+            path {
+              transition: stroke 0.3s ease-in-out;
+            }
+          }
+        }
+
+        &-content {
+          visibility: hidden;
+          opacity: 0;
+          z-index: -1;
+          position: absolute;
+          left: 0;
+          min-width: 9rem;
+          width: fit-content;
+          height: fit-content;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          z-index: 1;
+          padding: 0.5rem 0.25rem;
+          background-color: $gray;
+          border-radius: 1rem;
+          transform: translateY(0.5rem);
+          transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out,
+            z-index 0.3s ease-in-out;
+
+          &-link {
+            display: block;
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+
+            &:hover {
+              color: $pink;
+            }
           }
         }
       }

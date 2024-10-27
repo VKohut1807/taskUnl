@@ -31,7 +31,7 @@
 
   <body class="modal-open">
     <header class="header">
-      <div class="header__communication-line">
+      <section class="header__communication-line">
         <div class="wrapper">
           <div class="header__communication-line-content">
             <a
@@ -129,10 +129,10 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="wrapper">
-        <div class="header__menu">
+        <section class="header__menu">
           <a href="#" class="header__menu-logo">
             <svg
               width="128"
@@ -165,9 +165,9 @@
             </svg>
           </a>
           <div class="header__menu-links">
-            <a href="#" class="header__menu-link--dropdown">
-              Damskie buty skórzane
-              <span class="dropdown-arrow">
+            <div class="header__menu-link header__menu-link--dropdown">
+              <button>
+                <span> Damskie buty skórzane </span>
                 <svg
                   width="12"
                   height="12"
@@ -180,12 +180,25 @@
                     fill="#292929"
                   />
                 </svg>
-              </span>
-            </a>
+              </button>
+              <div class="header__menu-link--dropdown-content">
+                <a href="#" class="header__menu-link--dropdown-content-link">
+                  link 1
+                </a>
+                <a href="#" class="header__menu-link--dropdown-content-link">
+                  link 2
+                </a>
+                <a href="#" class="header__menu-link--dropdown-content-link">
+                  link 3
+                </a>
+              </div>
+            </div>
             <a href="#" class="header__menu-link">Bony podarunkowe</a>
             <a href="#" class="header__menu-link">Nowości</a>
             <a href="#" class="header__menu-link">Bestsellery</a>
-            <a href="#" class="header__menu-link--pink">% Wyprzedaż %</a>
+            <a href="#" class="header__menu-link header__menu-link--pink"
+              >% Wyprzedaż %</a
+            >
           </div>
           <div class="header__menu-tools">
             <div class="header__menu-tools-box header__menu-tools-box--search">
@@ -290,7 +303,7 @@
               </svg>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </header>
 
@@ -698,8 +711,8 @@
       </div>
     </footer>
 
-    <div id="modal-shadow" class="shadow"></div>
-    <div id="modal" class="modal">
+    <section id="modal-shadow" class="shadow"></section>
+    <section id="modal" class="modal">
       <div class="modal__content">
         <h5>Welcome :)</h5>
         <button
@@ -720,7 +733,7 @@
           </ol>
         </div>
       </div>
-    </div>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script
